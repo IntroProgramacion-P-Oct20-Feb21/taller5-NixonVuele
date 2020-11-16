@@ -22,22 +22,25 @@ public class Secuenciales3{
             porcentaje=10;
             descuento = (porcentaje * precioHabitacion /100);
             pagoTotal  = subtotal - descuento;
-        }
-        if (diasHospedaje>dias2){
-            porcentaje=15;
-            descuento=0;
-            pagoTotal=0;
-            descuento = (porcentaje * precioHabitacion /100);
-            pagoTotal  = subtotal - descuento;
-        }
-        if (diasHospedaje>dias3){
-            descuento=0;
-            pagoTotal=0;
-            porcentaje=20;
-            descuento = (porcentaje * precioHabitacion /100);
-            pagoTotal  = subtotal - descuento;
-        }
+                if (diasHospedaje>dias2){
+                    porcentaje=15;
+                    descuento=0;
+                    pagoTotal=0;
+                    descuento = (porcentaje * precioHabitacion /100);
+                    pagoTotal  = subtotal - descuento;
+                        if (diasHospedaje>dias3){
+                            descuento=0;
+                            pagoTotal=0;
+                            porcentaje=20;
+                            descuento = (porcentaje * precioHabitacion /100);
+                            pagoTotal  = subtotal - descuento;
         System.out.println("El subtotal a pagar es: "+subtotal +", el descuento"
                 + " es: " +descuento +" y el total a pagar es: " + pagoTotal);
+                        }
+                }
+                
+        }else{
+            System.out.println("El total a pagar es: "+subtotal);
+        }
     }
 }
